@@ -2,12 +2,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-//public Afisha(int id, String name, String tape) {
-//        this.id = id;
-//        this.name = name;
-//        this.tape = tape;
-//        }
-
 class MovieManagerTest {
     Afisha first = new Afisha(1, "Бладшот", "боевик");
     Afisha second = new Afisha(2, "Вперёд", "мульт");
