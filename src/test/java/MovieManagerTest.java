@@ -1,4 +1,6 @@
 import org.junit.jupiter.api.Test;
+import ru.netology.domain.Afisha;
+import ru.netology.manager.MovieManager;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,7 +17,7 @@ class MovieManagerTest {
     Afisha tenth = new Afisha(10, "Он вам не Димон", "боевик");
 
     @Test
-    public void findLastTest() {
+    public void findLastMovieCountOverMassiveTest() {
         MovieManager manager = new MovieManager(7);
         manager.addMovie(first);
         manager.addMovie(second);
@@ -28,7 +30,7 @@ class MovieManagerTest {
     }
 
     @Test
-    public void findLastTest1() {
+    public void findLastMovieCountEquallyMassiveTest() {
         MovieManager manager = new MovieManager(4);
         manager.addMovie(first);
         manager.addMovie(second);
@@ -36,6 +38,38 @@ class MovieManagerTest {
         manager.addMovie(fourth);
 
         Afisha[] expected = new Afisha[]{fourth, third, second, first};
+        Afisha[] actual = manager.findLast();
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void findLastMovieCountOverMassiveNoParamsTest() {
+        MovieManager manager = new MovieManager();
+        manager.addMovie(first);
+        manager.addMovie(second);
+        manager.addMovie(third);
+
+        Afisha[] expected = new Afisha[]{third, second, first};
+        Afisha[] actual = manager.findLast();
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void findLastMovieCountEquallyMassiveNoParamsTest() {
+        MovieManager manager = new MovieManager();
+        manager.addMovie(first);
+        manager.addMovie(second);
+        manager.addMovie(third);
+        manager.addMovie(fourth);
+        manager.addMovie(fifth);
+        manager.addMovie(sixth);
+        manager.addMovie(seventh);
+        manager.addMovie(eighth);
+        manager.addMovie(ninth);
+        manager.addMovie(tenth);
+
+        Afisha[] expected = new Afisha[]{tenth, ninth, eighth, seventh,
+                sixth, fifth, fourth, third, second, first};
         Afisha[] actual = manager.findLast();
         assertArrayEquals(expected, actual);
     }

@@ -1,4 +1,6 @@
-import java.util.Arrays;
+package ru.netology.manager;
+
+import ru.netology.domain.Afisha;
 
 public class MovieManager {
     private int movieCount;
@@ -30,7 +32,7 @@ public class MovieManager {
             resultLength = items.length;
         }
 
-        Afisha result[] = new Afisha[resultLength];
+        Afisha[] result = new Afisha[resultLength];
         for (int i = 0; i < result.length; i++) {
             int index = items.length - i - 1;
             result[i] = items[index];
