@@ -6,15 +6,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MovieManagerTest {
     Afisha first = new Afisha(1, "Бладшот", "боевик");
-    Afisha second = new Afisha(2, "Вперёд", "мульт");
-    Afisha third = new Afisha(3, "Отель Белград", "ком");
+    Afisha second = new Afisha(2, "Вперёд", "мультфильм");
+    Afisha third = new Afisha(3, "Отель Белград", "комедия");
     Afisha fourth = new Afisha(4, "Джентельмены", "боевик");
-    Afisha fifth = new Afisha(5, "Человек-невидимка", "боевик");
-    Afisha sixth = new Afisha(6, "Тролли. Мировой тур", "боевик");
-    Afisha seventh = new Afisha(7, "Номер один", "боевик");
+    Afisha fifth = new Afisha(5, "Человек-невидимка", "ужасы");
+    Afisha sixth = new Afisha(6, "Тролли. Мировой тур", "мультфиль");
+    Afisha seventh = new Afisha(7, "Номер один", "комедия");
     Afisha eighth = new Afisha(8, "Брат", "боевик");
-    Afisha ninth = new Afisha(9, "50 оттенков серого", "боевик");
-    Afisha tenth = new Afisha(10, "Он вам не Димон", "боевик");
+    Afisha ninth = new Afisha(9, "Париж, я люблю тебя", "мелодрама");
+    Afisha tenth = new Afisha(10, "Еще по одной", "драма");
 
     @Test
     public void findLastMovieCountOverMassiveTest() {
